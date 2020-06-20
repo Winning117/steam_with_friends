@@ -9,6 +9,7 @@ class User:
         self.download_game_list()
 
     def download_game_list(self):
+        print(f"Loading {self.username}'s games...")
         try:
             games_url = self.url + "/games?tab=all&xml=1"
             response = requests.get(games_url).content.decode()

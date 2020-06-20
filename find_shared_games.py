@@ -23,10 +23,14 @@ def main():
         else:
             common_games_set = common_games_set.intersection(friend.games_dict)
     
-    common_games_list = list(common_games_set)
-    common_games_list.sort()
-    for game in common_games_list:
-        print(game)
+    if common_games_set != None:
+        print(f"\nGames that everyone owns:\n--------------------------")
+        common_games_list = list(common_games_set)
+        common_games_list.sort()
+        for game in common_games_list:
+            print(game)
+    else:
+        print("There don't appear to be any common games between all of the users specified in 'friends_list.txt'!")
 
 if __name__ == "__main__":
     main()
