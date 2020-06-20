@@ -5,9 +5,11 @@ def create_user_objects():
     friends = []
     with open("friends_list.txt") as file_in:
         for line in file_in:
-            line_list = line.split(", ")
-            username = line_list[0]
-            profile_url = line_list[1].rstrip()
+            if "#" in line: # ignore users that are commented out
+                continue
+            line_list = line.split(",")
+            username = line_list[0].strip()
+            profile_url = line_list[1].strip()
             friend = User(username=username, url=profile_url)
             friends.append(friend)
     return friends
