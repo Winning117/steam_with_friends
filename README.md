@@ -9,5 +9,5 @@ This will give you a list of games that both you and your friends own. This is u
 
 ## How do I run it?
 
- - Edit `friends_list.txt` to include the urls of your friends that you want to play with. Replace the ones currently in the list as those are just an example. The name before the comma is just for reference.
+ - Edit `friends_list.txt` to include the urls of your friends' profiles. Replace the ones currently in the list as those are just an example. The name before the comma is just for reference. If you want to temporarily exclude someone from the search, just add a `#` to the beginning of the line, effectively commenting them out.
  - Type `python3 find_shared_games.py`
